@@ -30,6 +30,10 @@
           <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
       </div>
+      <p class="disqus-notice hentry">
+        <a class="btn btn-default" href="javascript:loadComment();">点击以加载 Disqus</a>
+        如果评论框加载不出来，那就说明 Disqus 被墙了，你看着办吧 |ー` )
+      </p>
     </div>
 
   {% elseif theme.hypercomments_id %}

@@ -12,10 +12,14 @@
           this.page.identifier = '{{ page.path }}';
           this.page.title = '{{ page.title| addslashes }}';
         };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://{{theme.disqus.shortname}}.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
+        var loadComment = function () {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://{{theme.disqus.shortname}}.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+ 
+          $('.disqus-notice').remove(); ///加载后移除按钮
+        };
       </script>
     {% endif %}
 
